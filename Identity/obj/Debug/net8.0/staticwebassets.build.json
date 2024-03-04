@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "py+zy4Xds50FzY4Kl+r19YbT1zhx6fhfQsAxkdvCRK0=",
+  "Source": "Identity",
+  "BasePath": "_content/Identity",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Identity\\wwwroot",
+      "Source": "Identity",
+      "ContentRoot": "D:\\projects\\C#\\Asp.NetCore\\Identity\\Identity\\wwwroot\\",
+      "BasePath": "_content/Identity",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

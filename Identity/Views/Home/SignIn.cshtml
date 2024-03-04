@@ -1,0 +1,37 @@
+﻿@model UserSignInModel
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="SignIn" class="p-4 w-25 mx-auto shadow" method="post">
+
+    <input type="hidden" asp-for="@Model.ReturnUrl"/>
+    <div class="mb-3">
+        <label> Kullanıcı Adı: </label>
+        <span class="text-danger" asp-validation-for="@Model.UserName"></span>
+        <input asp-for="@Model.UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label> Şifre: </label>
+        <span class="text-danger" asp-validation-for="@Model.Password"></span>
+        <input type="password" asp-for="@Model.Password" class="form-control" />
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" asp-for="@Model.RememberMe">
+        <label class="form-check-label" for="RememberMe">
+            Beni Hatırla
+        </label>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary"> Giriş </button>
+    </div>
+
+    <div class="text-dange mt-2" asp-validation-summary="ModelOnly">
+    </div>
+
+</form>
+

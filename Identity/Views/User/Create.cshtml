@@ -1,0 +1,35 @@
+﻿@model AdminUserCreateModel
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Create" class="p-4 w-25 mx-auto shadow" method="post">
+
+    <div class="mb-3">
+        <label> Kullanıcı Adı: </label>
+        <span class="text-danger" asp-validation-for="@Model.UserName"></span>
+        <input asp-for="@Model.UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label> Email: </label>
+        <span class="text-danger" asp-validation-for="@Model.Email"></span>
+        <input type="email" asp-for="@Model.Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label> Cinsiyet: </label>
+        <span class="text-danger" asp-validation-for="@Model.Gender"></span>
+        <input asp-for="@Model.Gender" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary"> Ekle </button>
+    </div>
+
+    <div class="text-dange mt-2" asp-validation-summary="ModelOnly">
+    </div>
+
+</form>
+

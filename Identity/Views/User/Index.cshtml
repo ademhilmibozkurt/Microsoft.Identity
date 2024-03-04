@@ -1,0 +1,33 @@
+﻿@model List<AppUser>
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<a asp-action="Create" asp-controller="User" class="my-2"> Yeni kullanıcı ekle </a>
+<table class="table table-hovered table-bordered table-sm">
+
+    <thead>
+        <tr>
+            <th> Kullanıcı Adı </th>
+            <th> Email </th>
+            <th> Cinsiyet </th>
+            <th> Rol Bilgisi </th>
+            <th>  </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.UserName </td>
+                <td> @item.Email </td>
+                <td> @item.Gender </td>
+                <td> <getUserInfo user-id="@item.Id"></getUserInfo> </td>
+                <td>  </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
